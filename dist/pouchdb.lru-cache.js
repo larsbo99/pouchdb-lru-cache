@@ -898,7 +898,7 @@ var process=_dereq_("__browserify_process"),global=typeof self !== "undefined" ?
 var Promise;
 /* istanbul ignore next */
 if (typeof window !== 'undefined' && window.PouchDB) {
-  Promise = window.PouchDB.utils.Promise;
+  Promise = require('pouchdb/extras/promise');
 } else {
   Promise = typeof global.Promise === 'function' ? global.Promise : _dereq_('lie');
 }
